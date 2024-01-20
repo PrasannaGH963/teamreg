@@ -58,9 +58,10 @@ if search_id:
                 st.title(f"Teammates for : {game}")
 
                 if game == ["BGMI","FreeFire"]:
-                    num = 4  # Default number of teammates for other games
+                    num = 3  # Default number of teammates for other games
                 else:
-                    num=5
+                    st.info("Fill all 4 teammates details")
+                    num=4
 
                 teammate_names = []
                 teammate_numbers = []
@@ -68,7 +69,7 @@ if search_id:
 
                 for i in range(num):
                     teammate_name = st.text_input(f"Name of Teammate {i + 1}:", key=f"{game}_name_{i}")
-                    teammate_number = st.text_input(f"Number of Teammate {i + 1}:", max_chars=10,
+                    teammate_number = st.text_input(f"Contact no. of Teammate {i + 1}:", max_chars=10,
                                                     key=f"{game}_num_{i}")
                     teammate_email = st.text_input(f"Email of Teammate {i + 1}:", key=f"{game}_em_{i}")
 
