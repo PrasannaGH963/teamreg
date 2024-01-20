@@ -14,10 +14,30 @@ st.set_page_config(
     page_title="Team Registration for Acunetix 11.0",
     page_icon="🚀",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="collapsed"
 )
+page_by_img = '''
+<style>
+[data-testid="stApp"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://i.ibb.co/dDbxZpC/a7478d28a0794882ad256d4b795c64b3.jpg") center center / cover;
+    opacity: 0.5; /* Adjust the overlay opacity value as needed (0.0 to 1.0) */
+}
+[data-testid="stHeader"] {
+background: rgba(0,0,0,0);
+}
 
-image_url = "https://i.ibb.co/GVR0QvY/acunetixheader.png"
+</style>
+'''
+st.markdown(page_by_img, unsafe_allow_html=True)
+
+
+image_url = "https://i.ibb.co/1dCdYrG/Acunetix-gform-header.png"
 st.image(image_url, use_column_width=True) 
 
 # Function to write data to Google Sheet
@@ -51,7 +71,4 @@ st.markdown("---")
 
 st.subheader("Ready to Register?")
 st.write("🚀 Secure your team's spot in the chronicles of Acunetix 11.0! Time waits for no one.")
-st.info("To register for team event access the sidebar using the button in the top left corner") 
-
-
-# You can add more content or information here based on your needs
+st.info('To register for team event access the sidebar using the button in the top left corner') 
