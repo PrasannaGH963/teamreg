@@ -1,6 +1,6 @@
 import streamlit as st
 
-from oauth2client.service_account import ServiceAccountCredentials
+#from oauth2client.service_account import ServiceAccountCredentials
 FOLDER_ID="1T3RiNpcYS-vbtSa_AN7z_ZlQbiZtLJfj"
 
 
@@ -35,15 +35,15 @@ image_url = "https://i.ibb.co/1dCdYrG/Acunetix-gform-header.png"
 st.image(image_url, use_column_width=True) 
 
 # Function to write data to Google Sheet
-if 'submit_clicked' not in st.session_state:
-    st.session_state.submit_clicked = False
+# if 'submit_clicked' not in st.session_state:
+#     st.session_state.submit_clicked = False
 
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("litforms.json", scope)
-client = gspread.authorize(creds)
+# scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+# creds = ServiceAccountCredentials.from_json_keyfile_name("litforms.json", scope)
+# client = gspread.authorize(creds)
 
-# Replace 'Sheet Name' with your actual+ sheet name
-sheet = client.open_by_key("1VeWt6NBUGqc_4TldxqFfrw9qWhd_4n_FKM0H0XEvoLw").worksheet("Sheet1")
+# # Replace 'Sheet Name' with your actual+ sheet name
+# sheet = client.open_by_key("1VeWt6NBUGqc_4TldxqFfrw9qWhd_4n_FKM0H0XEvoLw").worksheet("Sheet1")
 
 # Adding a title with style
 st.title("Team Registration for Acunetix 11.0 🛑🚀")
