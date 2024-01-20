@@ -1,5 +1,5 @@
 import streamlit as st
-import gspread
+
 from oauth2client.service_account import ServiceAccountCredentials
 FOLDER_ID="1T3RiNpcYS-vbtSa_AN7z_ZlQbiZtLJfj"
 
